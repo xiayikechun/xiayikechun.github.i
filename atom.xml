@@ -6,7 +6,7 @@
   <link href="http://bk.puguying.cn/atom.xml" rel="self"/>
   
   <link href="http://bk.puguying.cn/"/>
-  <updated>2021-06-03T06:33:25.881Z</updated>
+  <updated>2021-06-03T07:19:42.645Z</updated>
   <id>http://bk.puguying.cn/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Hello World</title>
     <link href="http://bk.puguying.cn/2021/06/03/hello-world/"/>
     <id>http://bk.puguying.cn/2021/06/03/hello-world/</id>
-    <published>2021-06-03T06:33:25.881Z</published>
-    <updated>2021-06-03T06:33:25.881Z</updated>
+    <published>2021-06-03T07:19:42.645Z</published>
+    <updated>2021-06-03T07:19:42.645Z</updated>
     
     
       
@@ -41,8 +41,8 @@
     <title></title>
     <link href="http://bk.puguying.cn/2021/06/03/xin-lei-liao/"/>
     <id>http://bk.puguying.cn/2021/06/03/xin-lei-liao/</id>
-    <published>2021-06-03T06:33:25.881Z</published>
-    <updated>2021-06-03T06:33:25.881Z</updated>
+    <published>2021-06-03T07:19:42.645Z</published>
+    <updated>2021-06-03T07:19:42.645Z</updated>
     
     
       
@@ -60,11 +60,32 @@
   </entry>
   
   <entry>
+    <title>自动部署HEXO</title>
+    <link href="http://bk.puguying.cn/2021/06/03/yuque/zi-dong-bu-shu-hexo/"/>
+    <id>http://bk.puguying.cn/2021/06/03/yuque/zi-dong-bu-shu-hexo/</id>
+    <published>2021-06-03T06:33:42.000Z</published>
+    <updated>2021-06-03T07:20:12.013Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;利用语雀实现-HEXO-在线编辑并自动部署&quot;&gt;&lt;a href=&quot;#利用语雀实现-HEXO-在线编辑并自动部署&quot; class=&quot;headerlink&quot; title=&quot;利用语雀实现 HEXO 在线编辑并自动部署&quot;&gt;&lt;/a&gt;利用语雀实现 HEXO</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>手机服务器</title>
     <link href="http://bk.puguying.cn/2021/06/03/yuque/shou-ji-fu-wu-qi/"/>
     <id>http://bk.puguying.cn/2021/06/03/yuque/shou-ji-fu-wu-qi/</id>
     <published>2021-06-03T06:07:30.000Z</published>
-    <updated>2021-06-03T06:33:51.177Z</updated>
+    <updated>2021-06-03T07:20:12.021Z</updated>
     
     
       
@@ -85,7 +106,7 @@
     <link href="http://bk.puguying.cn/2021/06/02/yuque/bo-ke-di-1-qi/"/>
     <id>http://bk.puguying.cn/2021/06/02/yuque/bo-ke-di-1-qi/</id>
     <published>2021-06-02T12:41:05.000Z</published>
-    <updated>2021-06-03T06:33:51.233Z</updated>
+    <updated>2021-06-03T07:20:12.065Z</updated>
     
     
       

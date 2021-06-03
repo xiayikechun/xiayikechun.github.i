@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="紫鼠小窝">
+    <meta name="keywords" content="自动部署HEXO, 紫鼠小窝">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>紫鼠小窝</title>
+    <title>自动部署HEXO | 紫鼠小窝</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">自动部署HEXO</h1>
                 </div>
             </div>
         </div>
@@ -470,7 +470,32 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>越是长大越是心累？！！！！！！</p>
+                <h1 id="利用语雀实现-HEXO-在线编辑并自动部署"><a href="#利用语雀实现-HEXO-在线编辑并自动部署" class="headerlink" title="利用语雀实现 HEXO 在线编辑并自动部署"></a>利用语雀实现 HEXO 在线编辑并自动部署</h1><h2 id="部署-hexo"><a href="#部署-hexo" class="headerlink" title="部署 hexo"></a>部署 hexo</h2><p>暂缺</p>
+<h2 id="在-github-上"><a href="#在-github-上" class="headerlink" title="在 github 上"></a>在 github 上</h2><h4 id="创建一个私密仓库"><a href="#创建一个私密仓库" class="headerlink" title="创建一个私密仓库"></a>创建一个私密仓库</h4><h4 id="编辑-GitHub-Actions-脚本"><a href="#编辑-GitHub-Actions-脚本" class="headerlink" title="编辑 GitHub Actions 脚本"></a>编辑 GitHub Actions 脚本</h4><p>添加.github/workflows/main.yml<br>内容如下</p>
+<h1 id="workflow-name"><a href="#workflow-name" class="headerlink" title="workflow name"></a>workflow name</h1><p>name: Deploy To Github Pages</p>
+<h1 id="当有-push-到仓库和外部触发的时候就运行"><a href="#当有-push-到仓库和外部触发的时候就运行" class="headerlink" title="当有 push 到仓库和外部触发的时候就运行"></a>当有 push 到仓库和外部触发的时候就运行</h1><p>on: [push, repository_dispatch]</p>
+<h1 id="YUQUE-TOKEN"><a href="#YUQUE-TOKEN" class="headerlink" title="YUQUE_TOKEN"></a>YUQUE_TOKEN</h1><h1 id="Github-SSH-PRIVATE-KEY"><a href="#Github-SSH-PRIVATE-KEY" class="headerlink" title="Github_SSH_PRIVATE_KEY"></a>Github_SSH_PRIVATE_KEY</h1><p>jobs:<br>deploy:<br>name: Deploy Hexo Public To Pages<br>runs-on: ubuntu-latest<br>env:<br>TZ: Asia/Shanghai<br>steps: # check it to your workflow can access it # from: <a target="_blank" rel="noopener" href="https://github.com/actions/checkout">https://github.com/actions/checkout</a> - name: Checkout Repository master branch<br>uses: actions/checkout@master # from: <a target="_blank" rel="noopener" href="https://github.com/actions/setup-node">https://github.com/actions/setup-node</a> - name: Setup Node.js 14.x<br>uses: actions/setup-node@master<br>with:<br>node-version: “14.x” # from <a target="_blank" rel="noopener" href="https://github.com/x-cold/yuque-hexo">https://github.com/x-cold/yuque-hexo</a> - name: Setup Hexo Dependencies and Generate Public Files<br>env:<br>YUQUE_TOKEN: $<br>run: |<br>npm install<br>npm install hexo-cli -g<br>npm install yuque-hexo -g<br>yuque-hexo clean<br>yuque-hexo sync<br>hexo generate</p>
+<pre><code># from https://github.com/peaceiris/actions-gh-pages
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+      deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
+      external_repository: 用户名/博客仓库名
+      publish_branch: master  #博客部署分支
+      publish_dir: ./public
+      commit_message: auto deploy
+</code></pre>
+<h4 id="现在还不能运行需要配置隐藏内容"><a href="#现在还不能运行需要配置隐藏内容" class="headerlink" title="现在还不能运行需要配置隐藏内容"></a>现在还不能运行需要配置隐藏内容</h4><p>YUQUE_TOKEN 从语雀获取的 TOKEN，语雀上点击个人头像 –&gt; 设置 –&gt; Token 即可获取，要在 Hexo 源仓库的 Settings–&gt;Secrets 中进行添加，对重要信息进行保密<br>ACTION_DEPLOY_KEY 是 SSH-Key 密钥中的私钥，需要在 Secrets 中进行添加，公钥（.pub）已经存储在 Github 中<br><img src="https://cdn.nlark.com/yuque/0/2021/jpeg/12550378/1622702880051-9b29caaf-1300-4fde-b384-03530e41b126.jpeg#align=left&amp;display=inline&amp;height=1920&amp;margin=%5Bobject%20Object%5D&amp;name=IMG_20210603_144736.jpg&amp;originHeight=1920&amp;originWidth=1080&amp;size=196431&amp;status=done&amp;style=none&amp;width=1080" alt="IMG_20210603_144736.jpg"></p>
+<h2 id="在腾讯云函数"><a href="#在腾讯云函数" class="headerlink" title="在腾讯云函数"></a>在腾讯云函数</h2><p>新建函数选择自定义 Python</p>
+<h4 id="函数代码"><a href="#函数代码" class="headerlink" title="函数代码"></a>函数代码</h4><h1 id="coding-utf8"><a href="#coding-utf8" class="headerlink" title="-- coding: utf8 --"></a>-<em>- coding: utf8 -</em>-</h1><p>import requests</p>
+<p>def main_handler(event, context):<br>r = requests.post(“<a target="_blank" rel="noopener" href="https://api.github.com/repos/github%E7%94%A8%E6%88%B7%E5%90%8D/%E4%BB%93%E5%BA%93%E5%90%8D%E7%A7%B0/dispatches&quot;">https://api.github.com/repos/github用户名/仓库名称/dispatches"</a>,<br>json = {“event_type”: “start”},<br>headers = {“User-Agent”:’curl/7.52.1’,<br>‘Content-Type’: ‘application/json’,<br>‘Accept’: ‘application/vnd.github.everest-preview+json’,<br>‘Authorization’: ‘token 修改 githubtoken’})</p>
+<pre><code>if r.status_code == 204:
+    return "This's OK!"
+else:
+    return r.status_code
+</code></pre>
+<h2 id="HEXO-源码"><a href="#HEXO-源码" class="headerlink" title="HEXO 源码"></a>HEXO 源码</h2><h4 id="先安装-yuque-hexo"><a href="#先安装-yuque-hexo" class="headerlink" title="先安装 yuque-hexo"></a>先安装 yuque-hexo</h4><p>npm install yuque-hexo –save</p>
+<p>修改 package.json 文件<br>可以参考<br>{<br>“name”: “hexo-site”,<br>“version”: “0.0.0”,<br>“private”: true,<br>“scripts”: {<br>“build”: “hexo generate”,<br>“server”: “hexo server”,<br>“clean”: “hexo clean”,<br>“clean:yuque”: “yuque-hexo clean”,<br>“deploy”: “yuque-hexo sync &amp;&amp; hexo deploy”,<br>“publish”: “npm run clean &amp;&amp; npm run deploy”,<br>“dev”: “hexo s”,<br>“sync”: “yuque-hexo sync”,<br>“reset”: “npm run clean:yuque &amp;&amp; npm run sync”<br>},<br>“yuqueConfig”: {<br>“baseUrl”: “<a target="_blank" rel="noopener" href="https://www.yuque.com/api/v2&quot;">https://www.yuque.com/api/v2"</a>,<br>“login”: “语雀个人路径”,<br>“repo”: “知识库路径”,<br>“mdNameFormat”: “title”,<br>“postPath”: “source/_posts/yuque”,<br>“cachePath”: “yuque.json”,<br>“adapter”: “hexo”,<br>“token”: “语雀 token”,<br>“onlyPublished”: true,<br>“onlyPublic”: true<br>},<br>“hexo”: {<br>“version”: “5.4.0”<br>},<br>“dependencies”: {<br>“hexo”: “^5.0.0”,<br>“hexo-deployer-git”: “^3.0.0”,<br>“hexo-filter-github-emojis”: “^3.0.4”,<br>“hexo-generator-archive”: “^1.0.0”,<br>“hexo-generator-category”: “^1.0.0”,<br>“hexo-generator-feed”: “^3.0.0”,<br>“hexo-generator-index”: “^2.0.0”,<br>“hexo-generator-search”: “^2.4.2”,<br>“hexo-generator-tag”: “^1.0.0”,<br>“hexo-permalink-pinyin”: “^1.1.0”,<br>“hexo-renderer-ejs”: “^1.0.0”,<br>“hexo-renderer-marked”: “^4.0.0”,<br>“hexo-renderer-stylus”: “^2.0.0”,<br>“hexo-server”: “^2.0.0”,<br>“hexo-theme-landscape”: “^0.0.3”,<br>“hexo-wordcount”: “^6.0.1”<br>},<br>“devDependencies”: {<br>“yuque-hexo”: “^1.7.0”<br>}<br>}</p>
 
                 
             </div>
@@ -497,7 +522,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://bk.puguying.cn/2021/06/03/xin-lei-liao/">http://bk.puguying.cn/2021/06/03/xin-lei-liao/</a>
+                    <a href="http://bk.puguying.cn/2021/06/03/yuque/zi-dong-bu-shu-hexo/">http://bk.puguying.cn/2021/06/03/yuque/zi-dong-bu-shu-hexo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -706,13 +731,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/03/hello-world/">
+                <a href="/2021/06/03/xin-lei-liao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -743,13 +768,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/03/yuque/zi-dong-bu-shu-hexo/">
+                <a href="/2021/06/03/yuque/shou-ji-fu-wu-qi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="自动部署HEXO">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="手机服务器">
                         
-                        <span class="card-title">自动部署HEXO</span>
+                        <span class="card-title">手机服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
