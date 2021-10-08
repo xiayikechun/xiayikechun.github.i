@@ -6,7 +6,7 @@
   <link href="http://bk.puguying.cn/atom.xml" rel="self"/>
   
   <link href="http://bk.puguying.cn/"/>
-  <updated>2021-06-16T10:34:48.768Z</updated>
+  <updated>2021-10-08T05:12:49.404Z</updated>
   <id>http://bk.puguying.cn/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://bk.puguying.cn/2021/06/16/hello-world/"/>
-    <id>http://bk.puguying.cn/2021/06/16/hello-world/</id>
-    <published>2021-06-16T10:34:48.768Z</published>
-    <updated>2021-06-16T10:34:48.768Z</updated>
+    <link href="http://bk.puguying.cn/2021/10/08/hello-world/"/>
+    <id>http://bk.puguying.cn/2021/10/08/hello-world/</id>
+    <published>2021-10-08T05:12:49.404Z</published>
+    <updated>2021-10-08T05:12:49.404Z</updated>
     
     
       
@@ -39,10 +39,32 @@
   
   <entry>
     <title></title>
-    <link href="http://bk.puguying.cn/2021/06/16/xin-lei-liao/"/>
-    <id>http://bk.puguying.cn/2021/06/16/xin-lei-liao/</id>
-    <published>2021-06-16T10:34:48.768Z</published>
-    <updated>2021-06-16T10:34:48.768Z</updated>
+    <link href="http://bk.puguying.cn/2021/10/08/la-la-la/"/>
+    <id>http://bk.puguying.cn/2021/10/08/la-la-la/</id>
+    <published>2021-10-08T05:12:49.404Z</published>
+    <updated>2021-10-08T05:12:49.404Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;bzbzbsbbsbsbsbsbbs&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://bk.puguying.cn/2021/10/08/xin-lei-liao/"/>
+    <id>http://bk.puguying.cn/2021/10/08/xin-lei-liao/</id>
+    <published>2021-10-08T05:12:49.404Z</published>
+    <updated>2021-10-08T05:12:49.404Z</updated>
     
     
       
@@ -61,10 +83,10 @@
   
   <entry>
     <title></title>
-    <link href="http://bk.puguying.cn/2021/06/16/ce-shi-shuang-ce/"/>
-    <id>http://bk.puguying.cn/2021/06/16/ce-shi-shuang-ce/</id>
-    <published>2021-06-16T10:34:48.768Z</published>
-    <updated>2021-06-16T10:34:48.768Z</updated>
+    <link href="http://bk.puguying.cn/2021/10/08/ce-shi-shuang-ce/"/>
+    <id>http://bk.puguying.cn/2021/10/08/ce-shi-shuang-ce/</id>
+    <published>2021-10-08T05:12:49.404Z</published>
+    <updated>2021-10-08T05:12:49.404Z</updated>
     
     
       
@@ -82,11 +104,33 @@
   </entry>
   
   <entry>
+    <title>测试微信小程序</title>
+    <link href="http://bk.puguying.cn/2021/06/28/yuque/ce-shi-wei-xin-xiao-cheng-xu/"/>
+    <id>http://bk.puguying.cn/2021/06/28/yuque/ce-shi-wei-xin-xiao-cheng-xu/</id>
+    <published>2021-06-28T12:24:53.000Z</published>
+    <updated>2021-10-08T05:13:11.921Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;测试微信小程序&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>自动部署HEXO</title>
     <link href="http://bk.puguying.cn/2021/06/03/yuque/zi-dong-bu-shu-hexo/"/>
     <id>http://bk.puguying.cn/2021/06/03/yuque/zi-dong-bu-shu-hexo/</id>
     <published>2021-06-03T06:33:42.000Z</published>
-    <updated>2021-06-16T10:35:12.529Z</updated>
+    <updated>2021-10-08T05:13:11.961Z</updated>
     
     
       
@@ -107,7 +151,7 @@
     <link href="http://bk.puguying.cn/2021/06/03/yuque/shou-ji-fu-wu-qi/"/>
     <id>http://bk.puguying.cn/2021/06/03/yuque/shou-ji-fu-wu-qi/</id>
     <published>2021-06-03T06:07:30.000Z</published>
-    <updated>2021-06-16T10:35:12.533Z</updated>
+    <updated>2021-10-08T05:13:11.965Z</updated>
     
     
       
@@ -128,7 +172,7 @@
     <link href="http://bk.puguying.cn/2021/06/02/yuque/bo-ke-di-1-qi/"/>
     <id>http://bk.puguying.cn/2021/06/02/yuque/bo-ke-di-1-qi/</id>
     <published>2021-06-02T12:41:05.000Z</published>
-    <updated>2021-06-16T10:35:12.569Z</updated>
+    <updated>2021-10-08T05:13:12.005Z</updated>
     
     
       
